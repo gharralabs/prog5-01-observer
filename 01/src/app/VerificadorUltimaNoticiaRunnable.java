@@ -19,7 +19,7 @@ public class VerificadorUltimaNoticiaRunnable implements Runnable {
     @Override
     public void run()
     {
-        while(true)
+        while(! Thread.interrupted() )
         {
             estadao.exibirUltima();
             folha.mostrarUltima();
@@ -30,9 +30,8 @@ public class VerificadorUltimaNoticiaRunnable implements Runnable {
             }
             catch (InterruptedException ex)
             {
-                Logger.getLogger(Program.class.getName()).log(Level.SEVERE, null, ex);
+                break;
             }
         }
     }
-
 }

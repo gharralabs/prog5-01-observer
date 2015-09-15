@@ -1,8 +1,6 @@
 package app;
 
 import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 public class Program
 {
@@ -24,11 +22,16 @@ public class Program
             System.out.println("Informe o título da notícia: ");
             String titulo = scanner.nextLine();
             
+            if( "sair".equals(titulo))
+                break;
+            
             System.out.println("Informe o corpo da notícia: ");
             String materia = scanner.nextLine();
             
             lista.adicionar(titulo, materia);
         }
+        
+        th.interrupt();
     }
     
 }
