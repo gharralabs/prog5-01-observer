@@ -1,10 +1,7 @@
 package app;
 
-import java.util.logging.Level;
-import java.util.logging.Logger;
-
-
-public class VerificadorUltimaNoticiaRunnable implements Runnable {
+public class VerificadorUltimaNoticiaRunnable implements Runnable 
+{
     private final ListaNoticias lista;
     private final FolhaSP folha;
     private final Estadao estadao;
